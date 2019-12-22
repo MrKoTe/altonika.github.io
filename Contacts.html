@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+    <link rel="shortcut icon" href="./icon.ico" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>"ЧОП" Альтоника</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <h1>Альтоника</h1>
+      <nav id="main_menu" class="main-menu">
+        <ul class="menu_container">
+          <li class="menu-item">
+            <a class="menu-link" href="./index.html"
+              ><i class="fas fa-home"></i> Главная</a
+            >
+          </li>
+          <li class="menu-item">
+            <a class="menu-link" href="./Service.html"
+              ><i class="fas fa-tag"></i> Услуги</a
+            >
+          </li>
+          
+          </li>
+          <li class="menu-item">
+            <a class="menu-link" href="./Contacts.html"><i class="fas fa-id-card"></i> Контакты</a>
+          </li>
+          <li class="menu-item">
+            <a class="menu-link" href="./Requisites.html"><i class="fas fa-list-alt"></i> Реквизиты</a>
+          </li>
+        </ul>
+        <button id="menu_btn" class="btn btn-close btn-default">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+      <div class="contacts">
+        <a href="mailto:altonika@bk.ru"
+          >altonika@bk.ru</a
+        >
+      </div>
+    </header>
+    <main>
+      <div class="big-pic">
+        <div class="split">
+                
+          <div class="left-text">
+            <centre><h3>Балабаново</h3></centre>
+            <p>Адрес: г.Балабаново, ул.Боровская, д.62</p>
+            <p>Номер телефона: <a href="tel:8-484-386-23-26">8 (484) 386-23-26 </a></p>
+            <p>Часы работы: пн-пт 9:00–17:00</p>
+            <div>                <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+            </head>
+            <body>
+             
+            <!-- Создаём контейнер для карты -->
+            <div id="map" style="width: 360px; height: 400px"></div>
+             
+            <!-- Создаём карту -->
+            <script type="text/javascript">
+                // Функция ymaps.ready() будет вызвана, когда
+                // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+                ymaps.ready(init);
+             
+                function init() {
+                    // Создание карты.
+                    // https://tech.yandex.ru/maps/doc/jsapi/2.1/dg/concepts/map-docpage/
+                    var myMap = new ymaps.Map("map", {
+                        // Координаты центра карты.
+                        // Порядок по умолчнию: «широта, долгота».
+                        center: [55.184994, 36.647297],
+                        // Уровень масштабирования. Допустимые значения:
+                        // от 0 (весь мир) до 19.
+                        zoom: 18,
+                        // Элементы управления
+                        // https://tech.yandex.ru/maps/doc/jsapi/2.1/dg/concepts/controls/standard-docpage/
+                        controls: [
+             
+                            'zoomControl', // Ползунок масштаба
+                            'rulerControl', // Линейка
+                            'routeButtonControl', // Панель маршрутизации
+                            'trafficControl', // Пробки
+                            'typeSelector', // Переключатель слоев карты
+                            'fullscreenControl', // Полноэкранный режим
+             
+                            // Поисковая строка
+                            new ymaps.control.SearchControl({
+                                options: {
+                                    // вид - поисковая строка
+                                    size: 'small',
+                                    // Включим возможность искать не только топонимы, но и организации.
+                                    provider: 'yandex#search'
+                                }
+                            })
+             
+                        ]
+                    });
+             
+                    // Добавление метки
+                    // https://tech.yandex.ru/maps/doc/jsapi/2.1/ref/reference/Placemark-docpage/
+                    var myPlacemark = new ymaps.Placemark([55.184994, 36.647297], {
+                        // Хинт показывается при наведении мышкой на иконку метки.
+                        hintContent: 'Содержимое всплывающей подсказки',
+                        // Балун откроется при клике по метке.
+                        balloonContent: 'Альтоника'
+                    });
+             
+                    // После того как метка была создана, добавляем её на карту.
+                    myMap.geoObjects.add(myPlacemark);
+             
+                }
+            </script></div>
+          </div>
+          
+          <div></div>
+            
+          </div>
+        </div>
+      </div>
+      
+      
+    </main>
+    <footer class="main-footer">
+      <h1>Альтоника</h1>
+      
+      <nav class="footer-menu">
+        <ul class="menu-container">
+          
+          
+          
+        </ul>
+      </nav>
+      <div class="contacts">
+            <a href="mailto:altonika@bk.ru"
+            >altonika@bk.ru</a>
+      </div>
+      <div class="contacts">
+      
+    </footer>
+
+    <script src="./js/menu.js"></script>
+  </body>
+</html>
